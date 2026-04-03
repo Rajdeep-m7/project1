@@ -33,12 +33,12 @@ export default function App() {
 
           <ul className="hidden md:flex gap-10 text-sm">
             {menuItems.map((item) => (
-              <li
+              <a href={`#${item.toLowerCase()}`}
                 key={item}
                 className="cursor-pointer hover:text-gray-500 transition"
               >
                 {item}
-              </li>
+              </a>
             ))}
           </ul>
 
@@ -73,7 +73,7 @@ export default function App() {
         </nav>
 
         {/* ================= BACKGROUND ELEMENTS ================= */}
-        <div className="absolute inset-0 z-20 pointer-events-none">
+        <div id="home" className="absolute inset-0 z-20 pointer-events-none">
           {/* Purple Half Circle */}
           <motion.div
             className="absolute right-10 md:top-1/2 top-1/3 w-10 h-18 rotate-30 bg-purple-500 rounded-r-full -z-10"
@@ -173,7 +173,7 @@ export default function App() {
 
       {/* SECTION 1 */}
 
-      <div className="bg-[#f7f7f7] py-16 md:py-20 px-6 md:px-16 relative overflow-hidden">
+      <div id="studio" className="bg-[#f7f7f7] py-16 md:py-20 px-6 md:px-16 relative overflow-hidden">
         {/* 🔴 BLUR RED BUBBLE (SECTION 1 CENTER) */}
         <div className="absolute left-1/2 top-[35%] -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-60 md:h-60 bg-red-300 opacity-40 blur-3xl rounded-full z-0"></div>
 
@@ -367,7 +367,7 @@ export default function App() {
       </div>
 
       {/* SERVICES */}
-      <div className="font-satoshi bg-[#f7f7f7] px-6 md:px-16 py-20 relative">
+      <div id="services" className="font-satoshi bg-[#f7f7f7] px-6 md:px-16 py-20 relative">
         {/* TOP HEADING */}
         <div className="relative">
           <h1 className="text-4xl md:text-6xl font-medium leading-tight">
@@ -517,7 +517,7 @@ export default function App() {
       </section>
 
       {/* NEWSLETTER */}
-      <section className="bg-[#cfe3d4] pt-24 pb-10 px-6 md:px-16 relative">
+      <section id="contact" className="bg-[#cfe3d4] pt-24 pb-10 px-6 md:px-16 relative">
         {/* TITLE */}
         <div className="text-center">
           <h2 className="text-4xl md:text-6xl font-semibold font-serif leading-tight">
@@ -547,7 +547,7 @@ export default function App() {
         <div className="border-t border-gray-400 mt-20"></div>
 
         {/* FOOTER LINKS */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-10 text-sm text-gray-700">
+        <div id="faqs" className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-10 text-sm text-gray-700">
           <div>
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
